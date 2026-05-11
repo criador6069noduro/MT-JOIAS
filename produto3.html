@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+  <meta charset="UTF-8">
+  <title>MT JOIAS</title>
+  <link rel="stylesheet" href="style.css">
+ <head>
+  <meta charset="UTF-8">
+  <title>MT JOIAS</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    header img {
+      width: 100px;
+    }
+  </style>
+
+</head>
+
+ 
+<header>
+
+  <div style="background-color: #1a1a1a; color: white; padding: 25px; text-align: center;">
+    
+    <h1 style="margin: 0;">MT Joias</h1>
+
+    <div style="margin-top: 10px;">
+      <h2 style="color: white;">
+        Brinco Argola Estilo Neymar Prata 925
+      </h2>
+    </div>
+
+  </div>
+
+</header>
+
+<body>
+
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 50px; margin-top: 50px;">
+
+  <!-- IMAGEM -->
+  <div>
+    <img src="https://i.pinimg.com/1200x/4f/1f/c9/4f1fc909be98f5d521d5f3cb9dd7064c.jpg" width="300">
+  </div>
+
+  <!-- INFO -->
+  <div style="max-width: 400px;">
+    <h2>Brinco Argola Estilo Neymar Prata 925</h2>
+
+    <p style="color: gray;">
+       Brinco Argola Estilo Neymar Prata 925, Leve, confortavel e ideal para o uso do dia a dia.
+</p>
+
+
+    <p style="font-size: 20px;">
+      <span style="text-decoration: line-through; color: gray;">R$ 49,99</span>
+      <span style="color: green; font-weight: bold; margin-left: 10px;">R$ 34,99</span>
+    </p>
+
+    <button 
+    style="margin-top: 20px; background: black; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;"
+    onclick="window.location.href='https://wa.me/5561992564664?text=Opa%20irm%C3%A3o,%20dboa?%20Tava%20querendo%20comprar%20um%20brinco'">
+      Comprar no WhatsApp
+    </button>
+
+<div style="background-color: white; height: 2px; margin-bottom: 30px;"></div>
+
+<!-- BOTÃO COMPRAR -->
+<button onclick="abrirFrete()" 
+style="padding: 15px 30px; background-color: black; color: white; border: none; border-radius: 20px; cursor: pointer;">
+🛒 Comprar agora
+</button>
+
+
+<!-- POPUP FRETE -->
+<div id="frete" style="
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.7);
+justify-content: center;
+align-items: center;
+z-index: 9999;
+">
+
+  <div style="
+  background: white; 
+  padding: 30px; 
+  border-radius: 15px; 
+  text-align: center;
+  max-width: 300px;
+  ">
+
+    <h3>🚚 Como deseja receber?</h3>
+
+    <p style="font-size: 14px; color: gray;">
+      Escolha a melhor opção
+    </p>
+
+    <br>
+
+    <!-- MOTOBOY -->
+<button onclick="window.location.href='https://pag.ae/81LdDqATP'"  
+style="width: 100%; padding: 12px; margin-bottom: 10px; background: #111; color: white; border: none; border-radius: 10px; cursor: pointer;">
+🛵 Motoboy Premium R$25,00
+</button>
+
+<!-- CORREIOS -->
+<button onclick="window.location.href='https://pag.ae/81Lck8aS7'" 
+style="width: 100%; padding: 12px; margin-bottom: 10px; background: #111; color: white; border: none; border-radius: 10px; cursor: pointer;">
+📦 Via Correios
+</button>
+
+<!-- RETIRADA -->
+<button onclick="window.location.href='https://pag.ae/81LcniiKs'" 
+style="width: 100%; padding: 12px; margin-bottom: 10px; background: #111; color: white; border: none; border-radius: 10px; cursor: pointer;">
+📍 Retirada no local (Grátis)
+</button>
+
+    <!-- FECHAR -->
+    <button onclick="fecharFrete()" 
+    style="margin-top: 10px; background: red; color: white; padding: 8px; border: none; border-radius: 8px;">
+      Fechar
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- SCRIPT -->
+<script>
+function abrirFrete() {
+  document.getElementById("frete").style.display = "flex";
+}
+
+function fecharFrete() {
+  document.getElementById("frete").style.display = "none";
+}
+</script>
+  
+
+<body>
+
+<aside style="width: 250px; background-color: #1a1a1a; color: white; height: 100vh; padding: 20px; box-sizing: border-box; font-family: sans-serif; position: fixed; top: 0; left: 0; z-index: 999; overflow-y: auto;">
+  
+  <h2 style="font-size: 1.2rem; border-bottom: 1px solid #444; padding-bottom: 10px; margin-bottom: 20px;">
+    Categorias
+  </h2>
+  
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    
+   <!-- INÍCIO -->
+  <li style="margin-bottom: 15px;">
+    <a href="index.html"
+    style="color: white; font-weight: bold; text-decoration: none;"
+    onmouseover="this.style.color='#00ff88'" 
+    onmouseout="this.style.color='white'">
+      🏠 Início
+    </a>
+  </li>
+
+  <li style="margin-bottom: 15px;">
+      
+      <details style="cursor: pointer;">
+        
+        <summary style="color: white; font-weight: bold; list-style: none; outline: none; transition: 0.3s;"
+        onmouseover="this.style.color='#00ff88'" 
+        onmouseout="this.style.color='white'">
+          ▼ PRODUTOS
+        </summary>
+        
+        <ul style="list-style: none; padding-left: 15px; margin-top: 10px;">
+          
+          <li style="margin-bottom: 10px;">
+            <a href="Produto2.html"
+            style="color: #ccc; text-decoration: none; font-size: 0.9rem;"
+            onmouseover="this.style.color='white'" 
+            onmouseout="this.style.color='#ccc'">
+              Brinco Ponto De Luz
+            </a>
+          </li>
+
+          <li style="margin-bottom: 10px;">
+            <a href="Produto1.html"
+            style="color: #ccc; text-decoration: none; font-size: 0.9rem;"
+            onmouseover="this.style.color='white'" 
+            onmouseout="this.style.color='#ccc'">
+              Brinco Argola Estilo Neymar
+            </a>
+          </li>
+
+          <li style="margin-bottom: 10px;">
+            <a href="Produto1.html"
+            style="color: #ccc; text-decoration: none; font-size: 0.9rem;"
+            onmouseover="this.style.color='white'" 
+            onmouseout="this.style.color='#ccc'">
+              Brinco Argola Estilo Neymar Prata 925
+            </a>
+          </li>
+
+          <li style="margin-bottom: 10px;">
+            <a href="Produto4.html"
+            style="color: #ccc; text-decoration: none; font-size: 0.9rem;"
+            onmouseover="this.style.color='white'" 
+            onmouseout="this.style.color='#ccc'">
+              Brinco/piercing Raio
+            </a>
+          </li>
+
+
+   
+ </ul>
+      </details>
+
+    </li>
+    
+  </ul>
+
+  <div style="margin-top: 30px; border-top: 1px solid #444; padding-top: 20px;">
+    
+    <a href="https://wa.me/5561992564664"
+       target="_blank"
+       style="color: #00ff88; text-decoration: none; font-weight: bold; font-size: 0.9rem;">
+       ➔ Suporte WhatsApp
+    </a>
+
+  </div>
+
+</aside>
