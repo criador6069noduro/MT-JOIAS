@@ -6,141 +6,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial;
-}
 
-body{
-  background:#fff;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
 }
 
 /* HEADER */
-header{
-  background:#1a1a1a;
-  color:#fff;
-  text-align:center;
-  padding:25px;
+header {
+  background: #1a1a1a;
+  color: white;
+  padding: 25px;
+  text-align: center;
 }
 
-/* LAYOUT PRODUTO */
-.container{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:50px;
-  padding:50px;
+/* PRODUTO / CONTAINER */
+.produto-detalhe {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
 }
 
 /* IMAGEM */
-.container img{
-  width:300px;
-  border-radius:10px;
+.produto-detalhe img {
+  width: 320px;
+  border-radius: 10px;
 }
 
 /* INFO */
-.info{
-  max-width:450px;
+.produto-info {
+  max-width: 450px;
 }
 
 /* PREÇO */
-.preco{
-  font-size:20px;
-  margin-top:15px;
+.preco {
+  font-size: 20px;
+  margin: 15px 0;
 }
 
-.preco del{
-  color:gray;
+.preco-antigo {
+  text-decoration: line-through;
+  color: gray;
 }
 
-.preco span{
-  color:green;
-  font-weight:bold;
-  margin-left:10px;
+.preco-novo {
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 /* BOTÕES */
-button{
-  width:100%;
-  margin-top:15px;
-  padding:12px;
-  border:none;
-  border-radius:20px;
-  background:#111;
-  color:#fff;
-  cursor:pointer;
+.botao {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 /* POPUPS */
-.popup{
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.7);
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-.box{
-  background:#fff;
-  padding:25px;
-  border-radius:15px;
-  text-align:center;
-  width:90%;
-  max-width:320px;
+.box {
+  background: white; 
+  padding: 30px; 
+  border-radius: 15px; 
+  text-align: center;
+  max-width: 320px;
+  width: 90%;
 }
 
-/* MENU LATERAL */
-aside{
-  position:fixed;
-  top:0;
-  left:-260px;
-  width:250px;
-  height:100vh;
-  background:#1a1a1a;
-  color:#fff;
-  padding:20px;
-  transition:0.3s;
-  overflow-y:auto;
-  z-index:1000;
-}
-
-/* BOTÃO MENU */
-.menu-btn{
-  position:fixed;
-  top:10px;
-  left:10px;
-  background:#1a1a1a;
-  color:#fff;
-  border:none;
-  padding:10px 15px;
-  border-radius:8px;
-  cursor:pointer;
-  z-index:1001;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .container{
-    flex-direction:column;
-    text-align:center;
-    padding:20px;
+/* CELULAR */
+@media (max-width: 768px) {
+  .produto-detalhe {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
   }
 
-  .container img{
-    width:85%;
+  .produto-detalhe img {
+    width: 80%;
   }
 
-  .info{
-    width:100%;
+  .produto-info {
+    width: 100%;
   }
 }
+
 </style>
 </head>
 
@@ -151,8 +122,101 @@ aside{
   <h2>Brinco Ponto de Luz</h2>
 </header>
 
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-  
+<!-- PRODUTO -->
+<div class="produto-detalhe">
+
+  <!-- IMAGEM -->
+  <img src="https://i.pinimg.com/1200x/1c/31/ac/1c31acd6b13e0f3f80246a681fe28b01.jpg">
+
+  <!-- TEXTO -->
+  <div class="produto-info">
+
+    <h2>Brinco Ponto de Luz - Aço Inoxidável</h2>
+
+    <p style="color: gray; margin-top: 10px;">
+      Pode ser usado no mar ou piscina, resistente e leve.
+    </p>
+
+    <div style="margin-top: 15px; font-size: 14px; color: #444; line-height: 1.6;">
+      <p><strong>Variações de tamanho:</strong></p>
+      <p>PP (2mm) - R$9,99</p>
+      <p>P (4mm) - R$11,99</p>
+      <p>M (5mm) - R$13,99</p>
+      <p>G (6mm) - R$15,99</p>
+      <p>GG (7mm) - R$17,99</p>
+    </div>
+
+    <p class="preco">
+      <span class="preco-antigo">R$20,99</span>
+      <span class="preco-novo">R$13,99</span>
+    </p>
+
+    <!-- BOTÕES -->
+    <button class="botao"
+    onclick="window.location.href='https://wa.me/5561992564664?text=Quero%20comprar%20o%20brinco'">
+      Comprar no WhatsApp
+    </button>
+
+    <button class="botao" onclick="abrirTamanho()">
+      🛒 Comprar agora
+    </button>
+
+  </div>
+
+</div>
+
+<!-- POPUP TAMANHO -->
+<div id="tamanho" class="popup">
+  <div class="box">
+    <h3>📐 Escolha o tamanho</h3>
+    <p style="font-size: 14px; color: gray; margin-bottom: 10px;">Selecione a opção desejada</p>
+
+    <button class="botao" onclick="escolher('PP')">PP - R$9,99</button>
+    <button class="botao" onclick="escolher('P')">P - R$11,99</button>
+    <button class="botao" onclick="escolher('M')">M - R$13,99</button>
+    <button class="botao" onclick="escolher('G')">G - R$15,99</button>
+    <button class="botao" onclick="escolher('GG')">GG - R$17,99</button>
+
+    <button onclick="fecharTudo()" 
+    style="margin-top: 15px; background: red; color: white; padding: 10px; border: none; border-radius: 8px; width: 100%; cursor: pointer;">
+      Cancelar
+    </button>
+  </div>
+</div>
+
+<!-- POPUP FRETE -->
+<div id="frete" class="popup">
+  <div class="box">
+    <h3>🚚 Como deseja receber?</h3>
+    <p style="font-size: 14px; color: gray; margin-bottom: 10px;">Escolha a melhor opção</p>
+
+    <button class="botao" onclick="comprar('motoboy')">🛵 Motoboy Premium R$25,00</button>
+    <button class="botao" onclick="comprar('correios')">📦 Via Correios</button>
+    <button class="botao" onclick="comprar('retirada')">📍 Retirada no local (Grátis)</button>
+
+    <button onclick="voltar()" 
+    style="margin-top: 15px; background: gray; color: white; padding: 10px; border: none; border-radius: 8px; width: 100%; cursor: pointer;">
+      Voltar
+    </button>
+  </div>
+</div>
+
+<!-- MENU BOTÃO -->
+<button onclick="toggleMenu()" style="
+position: fixed;
+top: 10px;
+left: 10px;
+z-index: 1000;
+background: #1a1a1a;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 8px;
+cursor: pointer;
+">
+☰
+</button>
+
 <!-- MENU LATERAL -->
 <aside id="menuLateral" style="
 width: 250px;
@@ -165,7 +229,7 @@ top: 0;
 left: -260px;
 transition: 0.3s;
 overflow-y: auto;
-z-index: 9999;
+z-index: 999;
 ">
 
   <h2 style="border-bottom:1px solid #444; padding-bottom:10px;">
@@ -176,7 +240,7 @@ z-index: 9999;
 
     <!-- INÍCIO -->
     <li style="margin-bottom:15px;">
-      <a href="/MT-JOIAS/index.html"
+      <a href="/MT-JOIAS/index.html" 
       style="color:white; text-decoration:none; font-weight:bold;">
         🏠 Início
       </a>
@@ -185,8 +249,7 @@ z-index: 9999;
     <!-- PRODUTOS -->
     <li style="margin-bottom:15px;">
 
-      <details>
-
+      <details id="menuProdutos">
         <summary style="
           cursor:pointer;
           font-weight:bold;
@@ -203,7 +266,7 @@ z-index: 9999;
         <ul style="list-style:none; padding-left:15px; margin-top:10px;">
 
           <li style="margin-bottom:10px;">
-            <a href="/MT-JOIAS/produto2.html"
+            <a href="/MT-JOIAS/produto2.html" 
             style="color:#ccc; text-decoration:none;"
             onmouseover="this.style.color='white'"
             onmouseout="this.style.color='#ccc'">
@@ -212,7 +275,7 @@ z-index: 9999;
           </li>
 
           <li style="margin-bottom:10px;">
-            <a href="/MT-JOIAS/produto1.html"
+            <a href="/MT-JOIAS/produto1.html" 
             style="color:#ccc; text-decoration:none;"
             onmouseover="this.style.color='white'"
             onmouseout="this.style.color='#ccc'">
@@ -221,7 +284,7 @@ z-index: 9999;
           </li>
 
           <li style="margin-bottom:10px;">
-            <a href="/MT-JOIAS/produto5.html"
+            <a href="/MT-JOIAS/produto5.html" 
             style="color:#ccc; text-decoration:none;"
             onmouseover="this.style.color='white'"
             onmouseout="this.style.color='#ccc'">
@@ -230,7 +293,7 @@ z-index: 9999;
           </li>
 
           <li style="margin-bottom:10px;">
-            <a href="/MT-JOIAS/produto3.html"
+            <a href="/MT-JOIAS/produto3.html" 
             style="color:#ccc; text-decoration:none;"
             onmouseover="this.style.color='white'"
             onmouseout="this.style.color='#ccc'">
@@ -256,120 +319,31 @@ z-index: 9999;
 
 </aside>
 
-<script>
-function toggleMenu(){
-  let menu = document.getElementById("menuLateral");
-
-  if(menu.style.left === "0px"){
-    menu.style.left = "-260px";
-  } else {
-    menu.style.left = "0px";
-  }
-}
-</script>
-
-<!-- PRODUTO -->
-<div class="container">
-
-  <img src="https://i.pinimg.com/1200x/1c/31/ac/1c31acd6b13e0f3f80246a681fe28b01.jpg">
-
-  <div class="info">
-
-    <h2>Brinco Ponto de Luz - Aço Inoxidável</h2>
-
-    <p style="color:gray; margin-top:10px;">
-      Pode ser usado no mar ou piscina, resistente e leve.
-    </p>
-
-    <p>Variações de tamanho:</p>
-    <p>PP (2mm) - R$9,99</p>
-    <p>P (4mm) - R$11,99</p>
-    <p>M (5mm) - R$13,99</p>
-    <p>G (6mm) - R$15,99</p>
-    <p>GG (7mm) - R$17,99</p>
-
-    <p class="preco">
-      <del>R$20,99</del>
-      <span>R$13,99</span>
-    </p>
-
-    <button onclick="window.location.href='https://wa.me/5561992564664?text=Quero%20comprar%20o%20brinco'">
-      Comprar no WhatsApp
-    </button>
-
-    <button onclick="abrirTamanho()">
-      🛒 Comprar agora
-    </button>
-
-  </div>
-</div>
-
-<!-- POPUP TAMANHO -->
-<div id="tamanho" class="popup">
-  <div class="box">
-
-    <h3>Escolha o tamanho</h3><br>
-
-    <button onclick="escolher('PP')">PP - R$9,99</button>
-    <button onclick="escolher('P')">P - R$11,99</button>
-    <button onclick="escolher('M')">M - R$13,99</button>
-    <button onclick="escolher('G')">G - R$15,99</button>
-    <button onclick="escolher('GG')">GG - R$17,99</button>
-
-    <button style="background:red;margin-top:10px;" onclick="fecharTudo()">
-      Cancelar
-    </button>
-
-  </div>
-</div>
-
-<!-- POPUP FRETE -->
-<div id="frete" class="popup">
-  <div class="box">
-
-    <h3>Como deseja receber?</h3><br>
-
-    <button onclick="comprar('motoboy')">Motoboy R$25</button>
-    <button onclick="comprar('correios')">Correios</button>
-    <button onclick="comprar('retirada')">Retirada grátis</button>
-
-    <button style="background:gray;margin-top:10px;" onclick="voltar()">
-      Voltar
-    </button>
-
-  </div>
-</div>
-
+<!-- SCRIPTS -->
 <script>
 let tamanho = "";
 
-// abrir tamanho
 function abrirTamanho(){
   document.getElementById("tamanho").style.display="flex";
 }
 
-// escolher tamanho
 function escolher(t){
   tamanho = t;
   document.getElementById("tamanho").style.display="none";
   document.getElementById("frete").style.display="flex";
 }
 
-// voltar
 function voltar(){
   document.getElementById("frete").style.display="none";
   document.getElementById("tamanho").style.display="flex";
 }
 
-// fechar tudo
 function fecharTudo(){
   document.getElementById("tamanho").style.display="none";
   document.getElementById("frete").style.display="none";
 }
 
-// links
 function comprar(tipo){
-
   let link="";
 
   if(tamanho==="PP"){
@@ -405,11 +379,10 @@ function comprar(tipo){
   window.location.href = link;
 }
 
-// menu
-function toggleMenu(){
-  const menu = document.getElementById("menuLateral");
+function toggleMenu() {
+  let menu = document.getElementById("menuLateral");
 
-  if(menu.style.left === "0px"){
+  if (menu.style.left === "0px") {
     menu.style.left = "-260px";
   } else {
     menu.style.left = "0px";
