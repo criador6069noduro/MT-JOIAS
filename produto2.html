@@ -151,22 +151,8 @@ aside{
   <h2>Brinco Ponto de Luz</h2>
 </header>
 
-<!-- MENU BOTÃO -->
-<button onclick="toggleMenu()" style="
-position: fixed;
-top: 10px;
-left: 10px;
-z-index: 99999;
-background: #1a1a1a;
-color: white;
-border: none;
-padding: 10px 15px;
-border-radius: 8px;
-cursor: pointer;
-">
-☰
-</button>
-
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+  
 <!-- MENU LATERAL -->
 <aside id="menuLateral" style="
 width: 250px;
@@ -421,12 +407,12 @@ function comprar(tipo){
 
 // menu
 function toggleMenu(){
-  let menu=document.getElementById("menu");
+  const menu = document.getElementById("menuLateral");
 
-  if(menu.style.left==="0px"){
-    menu.style.left="-260px";
-  }else{
-    menu.style.left="0px";
+  if(menu.style.left === "0px"){
+    menu.style.left = "-260px";
+  } else {
+    menu.style.left = "0px";
   }
 }
 </script>
