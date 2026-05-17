@@ -25,7 +25,7 @@ header{
   padding:25px;
 }
 
-/* CONTEÚDO */
+/* CONTAINER */
 .container{
   display:flex;
   justify-content:center;
@@ -34,7 +34,7 @@ header{
   padding:50px;
 }
 
-/* IMAGEM */
+/* IMG */
 .container img{
   width:300px;
   border-radius:10px;
@@ -73,7 +73,7 @@ button{
   cursor:pointer;
 }
 
-/* POPUPS */
+/* POPUP */
 .popup{
   display:none;
   position:fixed;
@@ -96,7 +96,7 @@ button{
   max-width:320px;
 }
 
-/* MENU LATERAL */
+/* MENU */
 aside{
   position:fixed;
   top:0;
@@ -138,68 +138,65 @@ aside{
   <h2>Brinco Raio</h2>
 </header>
 
-<!-- BOTÃO MENU (CORRIGIDO) -->
+<!-- BOTÃO MENU (CORRIGIDO CANTO ESQUERDO) -->
 <button onclick="toggleMenu()" style="
-position: fixed;
-top: 10px;
-left: 10px;
-z-index: 10000;
-background: #1a1a1a;
-color: white;
-border: none;
-padding: 10px 15px;
-border-radius: 8px;
-cursor: pointer;
+position:fixed;
+top:10px;
+left:10px;
+z-index:10000;
+background:#1a1a1a;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
 ">
 ☰
 </button>
 
-<!-- MENU LATERAL (CORRIGIDO) -->
+<!-- MENU -->
 <aside id="menuLateral">
 
-  <h2 style="border-bottom:1px solid #444; padding-bottom:10px;">
+  <h2 style="border-bottom:1px solid #444;padding-bottom:10px;">
     Categorias
   </h2>
 
-  <ul style="list-style:none; padding:0; margin-top:20px;">
+  <ul style="list-style:none;padding:0;margin-top:20px;">
 
     <li style="margin-bottom:15px;">
-      <a href="index.html"
-      style="color:white; text-decoration:none; font-weight:bold;">
+      <a href="index.html" style="color:white;text-decoration:none;font-weight:bold;">
         🏠 Início
       </a>
     </li>
 
     <li style="margin-bottom:15px;">
       <details>
-        <summary style="cursor:pointer; font-weight:bold;">
+        <summary style="cursor:pointer;font-weight:bold;">
           ▼ Produtos
         </summary>
 
-        <ul style="list-style:none; padding-left:15px; margin-top:10px;">
-
+        <ul style="list-style:none;padding-left:15px;margin-top:10px;">
           <li><a href="produto2.html" style="color:#ccc;text-decoration:none;">Brinco Ponto de Luz</a></li>
           <li><a href="produto1.html" style="color:#ccc;text-decoration:none;">Brinco Argola Neymar</a></li>
           <li><a href="produto4.html" style="color:#ccc;text-decoration:none;">Brinco Raio</a></li>
           <li><a href="produto3.html" style="color:#ccc;text-decoration:none;">Argola Prata 925</a></li>
-
         </ul>
       </details>
     </li>
 
   </ul>
 
-  <div style="margin-top:30px; border-top:1px solid #444; padding-top:20px;">
+  <div style="margin-top:30px;border-top:1px solid #444;padding-top:20px;">
     <a href="https://wa.me/5561992564664"
        target="_blank"
-       style="color:#00ff88; text-decoration:none; font-weight:bold;">
+       style="color:#00ff88;text-decoration:none;font-weight:bold;">
        ➔ Suporte WhatsApp
     </a>
   </div>
 
 </aside>
 
-<!-- SCRIPT MENU (CORRIGIDO) -->
+<!-- SCRIPT MENU -->
 <script>
 function toggleMenu(){
   let menu = document.getElementById("menuLateral");
@@ -234,8 +231,48 @@ function toggleMenu(){
       Comprar no WhatsApp
     </button>
 
+    <!-- BOTÃO COMPRAR AGORA (ADICIONADO) -->
+    <button onclick="abrirFrete()">
+      🛒 Comprar agora
+    </button>
+
   </div>
 </div>
+
+<!-- POPUP FRETE -->
+<div id="frete" class="popup">
+  <div class="box">
+
+    <h3>Como deseja receber?</h3><br>
+
+    <button onclick="window.location.href='https://pag.ae/81LegDJzt'">
+      🛵 Motoboy Premium R$25,00
+    </button>
+
+    <button onclick="window.location.href='https://pag.ae/81LefqDTP'">
+      📦 Via Correios
+    </button>
+
+    <button onclick="window.location.href='https://pag.ae/81LefYyxN'">
+      📍 Retirada no local
+    </button>
+
+    <button style="background:red;margin-top:10px;" onclick="fecharFrete()">
+      Fechar
+    </button>
+
+  </div>
+</div>
+
+<script>
+function abrirFrete(){
+  document.getElementById("frete").style.display="flex";
+}
+
+function fecharFrete(){
+  document.getElementById("frete").style.display="none";
+}
+</script>
 
 </body>
 </html>
