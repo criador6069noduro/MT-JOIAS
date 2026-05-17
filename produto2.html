@@ -151,26 +151,102 @@ aside{
   <h2>Brinco Ponto de Luz</h2>
 </header>
 
-<!-- MENU -->
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<!-- MENU BOTÃO -->
+<button onclick="toggleMenu()" style="
+position: fixed;
+top: 10px;
+left: 10px;
+z-index: 1000;
+background: #1a1a1a;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 8px;
+cursor: pointer;
+">
+☰
+</button>
 
-<aside id="menu">
-  <h3>Categorias</h3>
-  <br>
+<!-- MENU LATERAL -->
+<!-- MENU LATERAL -->
+<aside id="menuLateral" style="
+width: 250px;
+background: #1a1a1a;
+color: white;
+height: 100vh;
+padding: 20px;
+position: fixed;
+top: 0;
+left: -260px;
+transition: 0.3s;
+overflow-y: auto;
+z-index: 999;
+">
 
-  <a href="index.html" style="color:#fff;text-decoration:none;">🏠 Início</a>
-  <br><br>
+  <h2 style="border-bottom:1px solid #444; padding-bottom:10px;">
+    Categorias
+  </h2>
 
-  <details>
-    <summary>Produtos</summary>
-    <br>
-    <a href="produto1.html" style="color:#ccc">Brinco Ponto de Luz</a><br>
-    <a href="produto2.html" style="color:#ccc">Brinco Argola Neymar</a><br>
-    <a href="produto3.html" style="color:#ccc">Brinco Raio</a><br>
-  </details>
+  <ul style="list-style:none; padding:0; margin-top:20px;">
 
-  <br><br>
-  <a href="https://wa.me/5561992564664" style="color:#00ff88;">Suporte WhatsApp</a>
+    <!-- INÍCIO -->
+    <li style="margin-bottom:15px;">
+      <a href="/MT-JOIAS/index.html" 
+      style="color:white; text-decoration:none; font-weight:bold;">
+        🏠 Início
+      </a>
+    </li>
+
+    <!-- PRODUTOS -->
+    <li style="margin-bottom:15px;">
+
+      <details id="menuProdutos">
+        <summary style="cursor:pointer; font-weight:bold;">
+          ▼ Produtos
+        </summary>
+
+        <ul style="list-style:none; padding-left:15px; margin-top:10px;">
+
+          <li style="margin-bottom:10px;">
+            <a href="/MT-JOIAS/produto2.html" style="color:#ccc; text-decoration:none;">
+              Brinco Ponto de Luz
+            </a>
+          </li>
+
+          <li style="margin-bottom:10px;">
+            <a href="/MT-JOIAS/produto1.html" style="color:#ccc; text-decoration:none;">
+              Brinco Argola Neymar
+            </a>
+          </li>
+
+          <li style="margin-bottom:10px;">
+            <a href="/MT-JOIAS/produto5.html" style="color:#ccc; text-decoration:none;">
+              Brinco Raio
+            </a>
+          </li>
+
+          <li style="margin-bottom:10px;">
+            <a href="/MT-JOIAS/produto3.html" style="color:#ccc; text-decoration:none;">
+              Argola Prata 925
+            </a>
+          </li>
+
+        </ul>
+      </details>
+
+    </li>
+
+  </ul>
+
+  <!-- SUPORTE -->
+  <div style="margin-top:30px; border-top:1px solid #444; padding-top:20px;">
+    <a href="https://wa.me/5561992564664"
+       target="_blank"
+       style="color:#00ff88; text-decoration:none; font-weight:bold;">
+       ➔ Suporte WhatsApp
+    </a>
+  </div>
+
 </aside>
 
 <!-- PRODUTO -->
