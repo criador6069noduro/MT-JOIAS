@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-  <meta charset="UTF-8">
-  <title>MT JOIAS</title>
-  <link rel="stylesheet" href="style.css">
- <head>
-  <meta charset="UTF-8">
-  <title>MT JOIAS</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-    }
-
-    header {
-      text-align: center;
-    }
-
-    header img {
-      width: 100px;
-    }
-  </style>
+<head>
+<meta charset="UTF-8">
+<title>MT JOIAS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <style>
-.produtos {
+
+<style>
+
+/* PRODUTO DETALHE */
+.produto-detalhe {
   display: flex;
+  gap: 40px;
+  align-items: center;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  padding: 40px;
 }
 
-.produto {
-  width: 220px;
+/* IMAGEM */
+.produto-detalhe img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* TEXTO */
+.produto-info {
+  max-width: 400px;
+}
+
+/* BOTÕES */
+.produto-info button {
+  display: block;
+  margin-top: 15px;
+  padding: 12px 30px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 /* CELULAR */
 @media (max-width: 768px) {
-  .produto {
-    width: 45%;
+  .produto-detalhe {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .produto-detalhe img {
+    width: 80%;
+  }
+
+  .produto-info {
+    width: 100%;
   }
 }
+
 </style>
+
 </head>
-
- 
-<header>
-
-  <div style="background-color: #1a1a1a; color: white; padding: 25px; text-align: center;">
-    
-    <h1 style="margin: 0;">MT Joias</h1>
-
-    <div style="margin-top: 10px;">
-      <h2 style="color: white;">
-        Brinco Argola Estilo Neymar
-      </h2>
-    </div>
-
-  </div>
-
-</header>
 
 <body>
 
-
-<div style="display: flex; align-items: center; justify-content: center; gap: 50px; margin-top: 50px;">
-
-  <!-- IMAGEM -->
-  <div>
-    <img src="https://i.pinimg.com/1200x/2a/c8/73/2ac873b1a49e1a1ae66640cd08e60765.jpg" width="320">
+<header>
+  <div style="background:#1a1a1a; color:white; padding:25px; text-align:center;">
+    <h1>MT Joias</h1>
+    <h2>Brinco Argola Estilo Neymar</h2>
   </div>
+</header>
 
-  <!-- INFO -->
-  <div style="max-width: 400px;">
+<!-- PRODUTO -->
+<div class="produto-detalhe">
+
+  <img src="https://i.pinimg.com/1200x/2a/c8/73/2ac873b1a49e1a1ae66640cd08e60765.jpg">
+
+  <div class="produto-info">
+
     <h2>Brinco Argola Estilo Neymar</h2>
 
     <p style="color: gray;">
-      Brinco Cravejado de Zirconia Estilo Neymar, Leve e ideal para o dia a dia.
+      Brinco cravejado de zirconia estilo Neymar, leve e ideal para o dia a dia.
     </p>
 
     <p style="font-size: 20px;">
@@ -84,12 +87,17 @@
       <span style="color: green; font-weight: bold; margin-left: 10px;">R$ 28,99</span>
     </p>
 
-    <button 
-    style="padding: 12px 36px; background-color: black; color: white; border: none; border-radius: 20px; cursor: pointer;"
-    onclick="window.location.href='https://wa.me/5561992564664?text=Quero%20comprar%20o%20Brinco%20Argola'">
+    <button onclick="window.location.href='https://wa.me/5561992564664?text=Quero%20comprar%20o%20Brinco'">
       Comprar pelo WhatsApp
     </button>
-<div style="background-color: white; height: 2px; margin-bottom: 30px;"></div>
+
+    <button>
+      Comprar agora
+    </button>
+
+  </div>
+
+</div>
 
 <!-- BOTÃO COMPRAR -->
 <button onclick="abrirFrete()" 
