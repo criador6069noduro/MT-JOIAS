@@ -140,60 +140,86 @@
   </div>
 
 </section>
-<aside style="width: 250px; background-color: #1a1a1a; color: white; height: 100vh; padding: 20px; box-sizing: border-box; font-family: sans-serif; position: fixed; top: 0; left: 0; z-index: 999; overflow-y: auto;">
-  
+<!-- BOTÃO MENU -->
+<button onclick="toggleMenu()" style="
+position: fixed;
+top: 10px;
+left: 10px;
+z-index: 1000;
+background: black;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 14px;
+">
+☰ Categorias
+</button>
+
+
+<!-- MENU LATERAL -->
+<aside id="menuLateral" style="
+width: 250px;
+background-color: #1a1a1a;
+color: white;
+height: 100vh;
+padding: 20px;
+box-sizing: border-box;
+font-family: sans-serif;
+position: fixed;
+top: 0;
+left: -260px;
+z-index: 999;
+overflow-y: auto;
+transition: 0.3s;
+">
+
   <h2 style="font-size: 1.2rem; border-bottom: 1px solid #444; padding-bottom: 10px; margin-bottom: 20px;">
     Categorias
   </h2>
-  
+
   <ul style="list-style: none; padding: 0; margin: 0;">
+
+    <!-- INÍCIO -->
+    <li style="margin-bottom: 15px;">
+      <a href="/MT-JOIAS/index.html"
+      style="color: white; font-weight: bold; text-decoration: none;">
+        🏠 Início
+      </a>
+    </li>
+
+    <!-- PRODUTOS -->
     <li style="margin-bottom: 15px;">
       
-      <details style="cursor: pointer;">
-        
-        <summary style="color: white; font-weight: bold; list-style: none; outline: none; transition: 0.3s;"
-        onmouseover="this.style.color='#00ff88'" 
-        onmouseout="this.style.color='white'">
+      <details>
+        <summary style="color: white; font-weight: bold; cursor: pointer;">
           ▼ PRODUTOS
         </summary>
         
         <ul style="list-style: none; padding-left: 15px; margin-top: 10px;">
           
           <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto2.html"
-            style="color: #ccc; text-decoration: none; font-size: 0.9rem;"
-            onmouseover="this.style.color='white'" 
-            onmouseout="this.style.color='#ccc'">
+            <a href="/MT-JOIAS/produto2.html" style="color: #ccc; text-decoration: none;">
               Brinco Ponto De Luz
             </a>
           </li>
 
           <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto1.html"
-            style="color: #ccc; text-decoration: none; font-size: 0.9rem;"
-            onmouseover="this.style.color='white'" 
-            onmouseout="this.style.color='#ccc'">
+            <a href="/MT-JOIAS/produto1.html" style="color: #ccc; text-decoration: none;">
               Brinco Argola Estilo Neymar
             </a>
           </li>
 
-          
-
           <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto4.html"
-            style="color: #ccc; text-decoration: none; font-size: 0.9rem;"
-            onmouseover="this.style.color='white'" 
-            onmouseout="this.style.color='#ccc'">
+            <a href="/MT-JOIAS/produto4.html" style="color: #ccc; text-decoration: none;">
               Brinco/piercing Raio
             </a>
           </li>
 
-         <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto3.html"
-            style="color: #ccc; text-decoration: none; font-size: 0.9rem;"
-            onmouseover="this.style.color='white'" 
-            onmouseout="this.style.color='#ccc'">
-              Brinco Argola Estilo Neymar Prata 925
+          <li style="margin-bottom: 10px;">
+            <a href="/MT-JOIAS/produto3.html" style="color: #ccc; text-decoration: none;">
+              Brinco Argola Prata 925
             </a>
           </li>
 
@@ -201,19 +227,35 @@
       </details>
 
     </li>
+
   </ul>
 
+  <!-- SUPORTE -->
   <div style="margin-top: 30px; border-top: 1px solid #444; padding-top: 20px;">
     
     <a href="https://wa.me/5561992564664"
        target="_blank"
-       style="color: #00ff88; text-decoration: none; font-weight: bold; font-size: 0.9rem;">
+       style="color: #00ff88; text-decoration: none; font-weight: bold;">
        ➔ Suporte WhatsApp
     </a>
 
   </div>
 
 </aside>
+
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu() {
+  let menu = document.getElementById("menuLateral");
+
+  if (menu.style.left === "0px") {
+    menu.style.left = "-260px";
+  } else {
+    menu.style.left = "0px";
+  }
+}
+</script>
 
 <div style="margin-left: 260px; padding: 20px;">
   </div>
