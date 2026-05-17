@@ -1,173 +1,191 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8" />
-        <title>MT JOIAS</title>
-        <link rel="stylesheet" href="style.css" />
-        <head>
-            <meta charset="UTF-8" />
-            <title>MT JOIAS</title>
+<head>
+<meta charset="UTF-8">
+<title>MT JOIAS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <style>
-                body {
-                    margin: 0;
-                    font-family: Arial;
-                }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
 
-                header {
-                    text-align: center;
-                }
+body{
+  background:#fff;
+}
 
-                header img {
-                    width: 100px;
-                }
-            </style>
-        </head>
+/* HEADER */
+header{
+  background:#1a1a1a;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
 
-        <header>
-            <div style="background-color: #1a1a1a; color: white; padding: 25px">
-                <h1 style="margin: 0">MT Joias</h1>
-                <h1>Saiba mais sobre nós</h1>
-            </div>
-        </header>
-        <div style="background-color: black; height: 2px; margin-bottom: 30px"></div>
-        <body>
-            <div style="display: flex; justify-content: center; margin-top: 50px">
-                <div style="background: white; padding: 30px; border-radius: 10px; width: 400px">
-                    <h3>
-                        A MT Joias é uma loja Virtual de Brincos e piercing, Com materiais de otima qualidade ideal para
-                        o uso do dia a dia.
-                    </h3>
+/* CONTEÚDO */
+.container{
+  display:flex;
+  justify-content:center;
+  margin-top:50px;
+  padding:20px;
+}
 
-                    <hr />
+/* BOX INFO */
+.box{
+  background:white;
+  padding:30px;
+  border-radius:10px;
+  width:400px;
+  max-width:90%;
+}
 
-                    <h3>Trabalhamos com brincos que estão em alta e se destacam, variando de piercings até argolas.</h3>
+/* BOTÃO */
+button{
+  display:block;
+  margin:20px auto;
+  background:black;
+  color:white;
+  padding:12px 20px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:16px;
+}
 
-                    <hr />
+/* MENU LATERAL */
+aside{
+  position:fixed;
+  top:0;
+  left:-260px;
+  width:250px;
+  height:100vh;
+  background:#1a1a1a;
+  color:white;
+  padding:20px;
+  transition:0.3s;
+  overflow-y:auto;
+  z-index:9999;
+}
 
-                    <button
-                        style="
-                            display: block;
-                            margin: 20px auto;
-                            background: black;
-                            color: white;
-                            padding: 12px 20px;
-                            border: none;
-                            border-radius: 5px;
-                            cursor: pointer;
-                            font-size: 16px;
-                        "
-                        onclick="window.location.href='index.html'">
-                        Voltar para o inicio
-                    </button>
-                    <aside
-                        style="
-                            width: 250px;
-                            background-color: #1a1a1a;
-                            color: white;
-                            height: 100vh;
-                            padding: 20px;
-                            box-sizing: border-box;
-                            font-family: sans-serif;
-                            position: fixed;
-                            top: 0;
-                            left: 0;
-                            z-index: 999;
-                            overflow-y: auto;
-                        ">
-                        <h2
-                            style="
-                                font-size: 1.2rem;
-                                border-bottom: 1px solid #444;
-                                padding-bottom: 10px;
-                                margin-bottom: 20px;
-                            ">
-                            Categorias
-                        </h2>
+/* BOTÃO MENU */
+.menu-btn{
+  position:fixed;
+  top:10px;
+  left:10px;
+  background:#1a1a1a;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:8px;
+  cursor:pointer;
+  z-index:10000;
+}
 
-                        <ul style="list-style: none; padding: 0; margin: 0">
-                            <!-- INÍCIO -->
-                            <li style="margin-bottom: 15px">
-                                <a
-                                    href="index.html"
-                                    style="color: white; font-weight: bold; text-decoration: none"
-                                    onmouseover="this.style.color='#00ff88'"
-                                    onmouseout="this.style.color='white'">
-                                    🏠 Início
-                                </a>
-                            </li>
+/* MOBILE */
+@media(max-width:768px){
+  .box{
+    width:90%;
+  }
+}
+</style>
+</head>
 
-                            <li style="margin-bottom: 15px">
-                                <details style="cursor: pointer">
-                                    <summary
-                                        style="
-                                            color: white;
-                                            font-weight: bold;
-                                            list-style: none;
-                                            outline: none;
-                                            transition: 0.3s;
-                                        "
-                                        onmouseover="this.style.color='#00ff88'"
-                                        onmouseout="this.style.color='white'">
-                                        ▼ PRODUTOS
-                                    </summary>
+<body>
 
-                                    <ul style="list-style: none; padding-left: 15px; margin-top: 10px">
-                                        <li style="margin-bottom: 10px">
-                                            <a
-                                                href="/MT-JOIAS/produto2.html"
-                                                style="color: #ccc; text-decoration: none; font-size: 0.9rem"
-                                                onmouseover="this.style.color='white'"
-                                                onmouseout="this.style.color='#ccc'">
-                                                Brinco Ponto De Luz
-                                            </a>
-                                        </li>
+<!-- HEADER -->
+<header>
+  <h1>MT Joias</h1>
+  <h2>Saiba mais sobre nós</h2>
+</header>
 
-                                        <li style="margin-bottom: 10px">
-                                            <a
-                                                href="/MT-JOIAS/produto1.html"
-                                                style="color: #ccc; text-decoration: none; font-size: 0.9rem"
-                                                onmouseover="this.style.color='white'"
-                                                onmouseout="this.style.color='#ccc'">
-                                                Brinco Argola Estilo Neymar
-                                            </a>
-                                        </li>
+<!-- BOTÃO MENU -->
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-                                        <li style="margin-bottom: 10px">
-                                            <a
-                                                href="/MT-JOIAS/produto3.html"
-                                                style="color: #ccc; text-decoration: none; font-size: 0.9rem"
-                                                onmouseover="this.style.color='white'"
-                                                onmouseout="this.style.color='#ccc'">
-                                                Brinco Argola Estilo Neymar Prata 925
-                                            </a>
-                                        </li>
+<!-- MENU LATERAL -->
+<aside id="menuLateral">
 
-                                        <li style="margin-bottom: 10px">
-                                            <a
-                                                href="/MT-JOIAS/produto4.html"
-                                                style="color: #ccc; text-decoration: none; font-size: 0.9rem"
-                                                onmouseover="this.style.color='white'"
-                                                onmouseout="this.style.color='#ccc'">
-                                                Brinco/piercing Raio
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </details>
-                            </li>
-                        </ul>
+  <h2 style="border-bottom:1px solid #444; padding-bottom:10px;">
+    Categorias
+  </h2>
 
-                        <div style="margin-top: 30px; border-top: 1px solid #444; padding-top: 20px">
-                            <a
-                                href="https://wa.me/5561992564664"
-                                target="_blank"
-                                style="color: #00ff88; text-decoration: none; font-weight: bold; font-size: 0.9rem">
-                                ➔ Suporte WhatsApp
-                            </a>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-        </body>
-    </head>
+  <ul style="list-style:none; padding:0; margin-top:20px;">
+
+    <li style="margin-bottom:15px;">
+      <a href="index.html"
+      style="color:white; text-decoration:none; font-weight:bold;">
+        🏠 Início
+      </a>
+    </li>
+
+    <li style="margin-bottom:15px;">
+      <details>
+        <summary style="cursor:pointer; font-weight:bold;">
+          ▼ Produtos
+        </summary>
+
+        <ul style="list-style:none; padding-left:15px; margin-top:10px;">
+
+          <li><a href="produto2.html" style="color:#ccc;text-decoration:none;">Brinco Ponto de Luz</a></li>
+          <li><a href="produto1.html" style="color:#ccc;text-decoration:none;">Brinco Argola Neymar</a></li>
+          <li><a href="produto3.html" style="color:#ccc;text-decoration:none;">Brinco Prata 925</a></li>
+          <li><a href="produto4.html" style="color:#ccc;text-decoration:none;">Brinco Raio</a></li>
+
+        </ul>
+      </details>
+    </li>
+
+  </ul>
+
+  <div style="margin-top:30px; border-top:1px solid #444; padding-top:20px;">
+    <a href="https://wa.me/5561992564664"
+       target="_blank"
+       style="color:#00ff88;text-decoration:none;font-weight:bold;">
+       ➔ Suporte WhatsApp
+    </a>
+  </div>
+
+</aside>
+
+<!-- CONTEÚDO -->
+<div class="container">
+
+  <div class="box">
+
+    <h3>
+      A MT Joias é uma loja virtual de brincos e piercings,
+      com materiais de ótima qualidade ideais para o dia a dia.
+    </h3>
+
+    <hr style="margin:20px 0;">
+
+    <h3>
+      Trabalhamos com produtos em alta, variando de piercings até argolas.
+    </h3>
+
+    <hr style="margin:20px 0;">
+
+    <button onclick="window.location.href='index.html'">
+      Voltar para o início
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+function toggleMenu(){
+  let menu = document.getElementById("menuLateral");
+
+  if(menu.style.left === "0px"){
+    menu.style.left = "-260px";
+  } else {
+    menu.style.left = "0px";
+  }
+}
+</script>
+
+</body>
 </html>
