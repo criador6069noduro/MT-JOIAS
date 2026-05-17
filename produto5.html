@@ -170,10 +170,21 @@ cursor:pointer;
     </li>
 
     <li style="margin-bottom:15px;">
-      <details>
-        <summary style="cursor:pointer;font-weight:bold;">
-          ▼ Produtos
-        </summary>
+      <details style="width:100%;">
+  <summary style="
+    cursor:pointer;
+    font-weight:bold;
+    display:block;
+    padding:8px 0;
+    color:white;
+    list-style:none;
+    user-select:none;
+    transition:0.3s;
+  "
+  onmouseover="this.style.color='#00ff88'"
+  onmouseout="this.style.color='white'">
+    ▼ Produtos
+  </summary>
 
         <ul style="list-style:none;padding-left:15px;margin-top:10px;">
           <li><a href="produto2.html" style="color:#ccc;text-decoration:none;">Brinco Ponto de Luz</a></li>
