@@ -240,7 +240,7 @@ transition: 0.3s;
     <!-- PRODUTOS -->
     <li style="margin-bottom: 15px;">
       
-      <details>
+      <details id="menuProdutos">
         <summary style="color: white; font-weight: bold; cursor: pointer;">
           ▼ PRODUTOS
         </summary>
@@ -290,6 +290,26 @@ transition: 0.3s;
   </div>
 
 </aside>
+
+
+<!-- SCRIPT MENU (PC aberto / celular fechado) -->
+<script>
+function ajustarMenu() {
+  const menu = document.getElementById("menuProdutos");
+  const lateral = document.getElementById("menuLateral");
+
+  if (window.innerWidth > 768) {
+    menu.open = true;       // abre produtos no PC
+    lateral.style.left = "0px"; // mostra menu no PC
+  } else {
+    menu.open = false;      // fecha no celular
+    lateral.style.left = "-260px"; // esconde menu no celular
+  }
+}
+
+ajustarMenu();
+window.addEventListener("resize", ajustarMenu);
+</script>
 
 
 <!-- SCRIPT -->
