@@ -1,108 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-  <meta charset="UTF-8">
-  <title>MT JOIAS</title>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <title>MT JOIAS</title>
 
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-@media (min-width: 769px) {
-  .conteudo {
-    margin-left: 270px;
-  }
-}
-
-@media (max-width: 768px) {
-  .conteudo {
-    margin-left: 0;
-  }
-}
-</style>
-     <style>
-.produto {
-  width: 220px;
-  box-sizing: border-box;
-}
-
-/* CELULAR */
-@media (max-width: 768px) {
-  .produtos {
-    gap: 15px;
-  }
-
-  .produto {
-    width: 48%;
-  }
-}
-</style>
-        
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-    }
-
-    header {
-      text-align: center;
-    }
-
-    header img {
-      width: 100px;
-    }
-  </style>
-        
-  <body>
-      <style>
-@media (max-width: 768px) {
-  .produto {
-    width: 45% !important;
-  }
-}
-</style>
-      <div style="background-color: #1a1a1a; color: white; padding: 25px; text-align: center;">
-
- </header>
-    
-    <h1 style="margin: 0;">MT Joias</h1>
-
-    <div style="margin-top: 10px;">
-      <a href="index.html" style="color: white; margin-right: 20px; text-decoration: none;">
-        Produtos
-      </a>
-
-      <a href="https://wa.me/5561992564664" 
-         target="_blank" 
-         style="color: white; margin-right: 20px; text-decoration: none;">
-         Suporte
-      </a>
-
-      <a href="https://www.instagram.com/mtjoias.bsb" 
-         target="_blank" 
-         style="color: white; margin-right: 20px; text-decoration: none;">
-         Redes Sociais
-      </a>
-
-      <a href="/MT-JOIAS/produto4.html" 
-         style="color: white; margin-right: 20px; text-decoration: none;">
-         Perguntas Frequentes
-      </a>
-
-      <a href="/MT-JOIAS/saiba1.html" style="color: white; margin-right: 20px; text-decoration: none;">
-         Saiba Mais sobre a MT
-      </a>
-    </div>
-
-</div>
-</header>
-
-<!-- LINHA DIVISÓRIA -->
-<div style="background-color: black; height: 2px; margin-bottom: 30px;"></div>
+<head>
+<meta charset="UTF-8">
+<title>MT JOIAS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* HEADER */
+header {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+header a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+/* PRODUTOS */
 .produtos {
   display: flex;
   flex-wrap: wrap;
@@ -121,32 +45,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
-/* IMAGEM */
 .produto img {
   width: 100%;
   max-width: 180px;
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 10px;
 }
 
-/* TÍTULO */
 .produto h2 {
   min-height: 60px;
   font-size: 18px;
-  margin: 10px 0;
-}
-
-/* PREÇO */
-.produto p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 0;
 }
 
 .preco-antigo {
@@ -161,7 +72,6 @@
   font-size: 30px;
 }
 
-/* BOTÃO */
 .produto button {
   margin-top: auto;
   background: black;
@@ -172,7 +82,7 @@
   cursor: pointer;
 }
 
-/* CELULAR */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .produto {
     width: 45%;
@@ -180,219 +90,140 @@
 }
 </style>
 
+</head>
 
+<body>
+
+<header>
+  <h1>MT Joias</h1>
+
+  <div>
+    <a href="index.html">Produtos</a>
+    <a href="https://wa.me/5561992564664">Suporte</a>
+    <a href="https://www.instagram.com/mtjoias.bsb">Instagram</a>
+    <a href="/MT-JOIAS/produto4.html">Perguntas Frequentes</a>
+    <a href="/MT-JOIAS/saiba1.html">Saiba Mais</a>
+  </div>
+</header>
+
+<div style="background:black; height:2px;"></div>
+
+<!-- PRODUTOS -->
 <section class="produtos">
 
-<!-- PRODUTO 1 -->
 <div class="produto">
   <img src="https://i.pinimg.com/1200x/2a/c8/73/2ac873b1a49e1a1ae66640cd08e60765.jpg">
-
-  <h2>Brinco Argola Estilo Neymar Junior</h2>
-
+  <h2>Brinco Argola Estilo Neymar</h2>
   <p>
     <span class="preco-antigo">R$34,99</span>
-    <span class="preco-novo">R$ 28,99</span>
+    <span class="preco-novo">R$28,99</span>
   </p>
-
-  <button onclick="window.location.href='/MT-JOIAS/produto1.html'">
-    Ver Produto
-  </button>
+  <button onclick="location.href='/MT-JOIAS/produto1.html'">Ver Produto</button>
 </div>
 
-<!-- PRODUTO 2 -->
 <div class="produto">
   <img src="https://i.pinimg.com/1200x/1c/31/ac/1c31acd6b13e0f3f80246a681fe28b01.jpg">
-
-  <h2>Brinco Ponto De Luz - Aço Inoxidável</h2>
-
+  <h2>Brinco Ponto de Luz</h2>
   <p>
     <span class="preco-antigo">R$15,99</span>
-    <span class="preco-novo">R$ 12,99</span>
+    <span class="preco-novo">R$12,99</span>
   </p>
-
-  <button onclick="window.location.href='/MT-JOIAS/produto2.html'">
-    Ver Produto
-  </button>
+  <button onclick="location.href='/MT-JOIAS/produto2.html'">Ver Produto</button>
 </div>
 
-<!-- PRODUTO 3 -->
 <div class="produto">
   <img src="https://i.pinimg.com/1200x/8a/17/2a/8a172a7d64fd180efe431aa3febf6577.jpg">
-
-  <h2>Brinco/piercing Raio Cravejado de Zirconia</h2>
-
+  <h2>Brinco Raio</h2>
   <p>
     <span class="preco-antigo">R$29,00</span>
-    <span class="preco-novo">R$ 19,99</span>
+    <span class="preco-novo">R$19,99</span>
   </p>
-
-  <button onclick="window.location.href='/MT-JOIAS/produto5.html'">
-    Ver Produto
-  </button>
+  <button onclick="location.href='/MT-JOIAS/produto5.html'">Ver Produto</button>
 </div>
 
-<!-- PRODUTO 4 -->
 <div class="produto">
   <img src="https://i.pinimg.com/1200x/4f/1f/c9/4f1fc909be98f5d521d5f3cb9dd7064c.jpg">
-
-  <h2>Brinco Argola Estilo Neymar Prata 925</h2>
-
+  <h2>Argola Prata 925</h2>
   <p>
     <span class="preco-antigo">R$45,99</span>
-    <span class="preco-novo">R$ 34,99</span>
+    <span class="preco-novo">R$34,99</span>
   </p>
-
-  <button onclick="window.location.href='/MT-JOIAS/produto3.html'">
-    Ver Produto
-  </button>
+  <button onclick="location.href='/MT-JOIAS/produto3.html'">Ver Produto</button>
 </div>
 
 </section>
+
+<!-- PROMOÇÕES -->
+<section class="produtos">
+
+<h2 style="width:100%; text-align:center;">🔥 Promoções</h2>
+
+<div class="produto">
+  <img src="https://i.pinimg.com/1200x/1c/31/ac/1c31acd6b13e0f3f80246a681fe28b01.jpg">
+  <h2>Leve 2 com 50% OFF</h2>
+  <p>
+    <span class="preco-antigo">R$14,99</span>
+    <span class="preco-novo">R$7,99</span>
+  </p>
+  <button>Comprar</button>
+</div>
+
+<div class="produto">
+  <img src="https://i.pinimg.com/1200x/ca/3d/75/ca3d750e1f1d0b4af750ad31ede2f414.jpg">
+  <h2>Combo Argola + Raio</h2>
+  <p>
+    <span class="preco-antigo">R$49,99</span>
+    <span class="preco-novo">R$45,99</span>
+  </p>
+  <button>Comprar</button>
+</div>
+
+<div class="produto">
+  <img src="https://i.pinimg.com/1200x/87/9b/49/879b49e6c06f543c3eed1f8032a53d10.jpg">
+  <h2>Combo + Desconto</h2>
+  <p>
+    <span class="preco-antigo">R$49,99</span>
+    <span class="preco-novo">R$42,99</span>
+  </p>
+  <button>Comprar</button>
+</div>
+
+</section>
+
 <!-- BOTÃO MENU -->
 <button onclick="toggleMenu()" style="
 position: fixed;
 top: 10px;
 left: 10px;
-z-index: 1000;
 background: #1a1a1a;
 color: white;
 border: none;
-padding: 10px 15px;
+padding: 10px;
 border-radius: 8px;
-cursor: pointer;
-font-size: 16px;
+z-index: 1000;
 ">
 ☰
 </button>
 
-
-<!-- MENU LATERAL -->
+<!-- MENU -->
 <aside id="menuLateral" style="
 width: 250px;
-background-color: #1a1a1a;
-color: white;
 height: 100vh;
-padding: 20px;
-box-sizing: border-box;
-font-family: sans-serif;
+background: #1a1a1a;
+color: white;
 position: fixed;
 top: 0;
 left: -260px;
-z-index: 999;
-overflow-y: auto;
+padding: 20px;
 transition: 0.3s;
 ">
 
-  <!-- TÍTULO -->
-  <h2 style="
-  font-size: 1.2rem;
-  border-bottom: 1px solid #444;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  ">
-    Categorias
-  </h2>
+<h2>Categorias</h2>
 
-  <ul style="list-style: none; padding: 0; margin: 0;">
-
-    <!-- INÍCIO -->
-    <li style="margin-bottom: 15px;">
-      <a href="/MT-JOIAS/index.html"
-      style="color: white; font-weight: bold; text-decoration: none;">
-        🏠 Início
-      </a>
-    </li>
-
-    <!-- PRODUTOS -->
-    <li style="margin-bottom: 15px;">
-      
-      <details id="menuProdutos">
-        <summary style="color: white; font-weight: bold; cursor: pointer;">
-          ▼ PRODUTOS
-        </summary>
-        
-        <ul style="list-style: none; padding-left: 15px; margin-top: 10px;">
-          
-          <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto2.html" style="color: #ccc; text-decoration: none;">
-              Brinco Ponto De Luz
-            </a>
-          </li>
-
-          <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto1.html" style="color: #ccc; text-decoration: none;">
-              Brinco Argola Estilo Neymar
-            </a>
-          </li>
-
-          <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto4.html" style="color: #ccc; text-decoration: none;">
-              Brinco/piercing Raio
-            </a>
-          </li>
-
-          <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto3.html" style="color: #ccc; text-decoration: none;">
-              Brinco Argola Prata 925
-            </a>
-          </li>
-
-        </ul>
-      </details>
-
-    </li>
-
-  </ul>
-
-  <!-- SUPORTE -->
-  <div style="margin-top: 30px; border-top: 1px solid #444; padding-top: 20px;">
-    
-    <a href="https://wa.me/5561992564664"
-       target="_blank"
-       style="color: #00ff88; text-decoration: none; font-weight: bold;">
-       ➔ Suporte WhatsApp
-    </a>
-
-  </div>
+<a href="/MT-JOIAS/index.html" style="color:white;">🏠 Início</a>
 
 </aside>
 
-
-<!-- SCRIPT -->
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("menuLateral");
-
-  if (menu.style.left === "0px") {
-    menu.style.left = "-260px";
-  } else {
-    menu.style.left = "0px";
-  }
-}
-</script>
-
-
-<!-- SCRIPT MENU (PC aberto / celular fechado) -->
-<script>
-function ajustarMenu() {
-  const menu = document.getElementById("menuProdutos");
-  const lateral = document.getElementById("menuLateral");
-
-  if (window.innerWidth > 768) {
-    menu.open = true;       // abre produtos no PC
-    lateral.style.left = "0px"; // mostra menu no PC
-  } else {
-    menu.open = false;      // fecha no celular
-    lateral.style.left = "-260px"; // esconde menu no celular
-  }
-}
-
-ajustarMenu();
-window.addEventListener("resize", ajustarMenu);
-</script>
-
-
-<!-- SCRIPT -->
 <script>
 function toggleMenu() {
   let menu = document.getElementById("menuLateral");
@@ -405,122 +236,5 @@ function toggleMenu() {
 }
 </script>
 
-<div style="margin-left: 260px; padding: 20px;">
-  </div>
-
-<section class="produtos" style="
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 30px;
-margin-top: 30px;
-text-align: center;
-">
-
-<h2 style="width: 100%; font-size: 28px; margin-bottom: 20px;">
-🔥 Promoções
-</h2>
-
-<!-- PRODUTO 1 -->
-<div style="
-width: 220px;
-background: white;
-padding: 15px;
-border-radius: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
-">
-
-<img src="https://i.pinimg.com/1200x/1c/31/ac/1c31acd6b13e0f3f80246a681fe28b01.jpg"
-style="width: 100%; max-width: 180px; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
-
-<h2 style="min-height: 60px; font-size: 16px;">
-Na compra de um brinco ponto de luz, você leva outro com 50% de desconto.
-</h2>
-
-<p style="display: flex; flex-direction: column; align-items: center;">
-<span style="text-decoration: line-through; color: gray; font-size: 30px;">
-R$ 14,99
-</span>
-<span style="color: green; font-weight: bold; font-size: 30px;">
-R$ 7,99
-</span>
-</p>
-
-<button 
-style="margin-top: auto; background: black; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-Comprar no WhatsApp
-</button>
-
-</div>
-
-<!-- PRODUTO 2 -->
-<div style="
-width: 220px;
-background: white;
-padding: 15px;
-border-radius: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
-">
-
-<img src="https://i.pinimg.com/1200x/ca/3d/75/ca3d750e1f1d0b4af750ad31ede2f414.jpg"
-style="width: 100%; max-width: 180px; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
-
-<h2 style="min-height: 60px; font-size: 16px;">
-Conjunto Brinco Argola Estilo neymar + Brinco/piercing Raio
-</h2>
-
-<p style="display: flex; flex-direction: column; align-items: center;">
-<span style="text-decoration: line-through; color: gray; font-size: 30px;">
-R$ 49,99
-</span>
-<span style="color: green; font-weight: bold; font-size: 30px;">
-R$ 45,99
-</span>
-</p>
-
-<button 
-style="margin-top: auto; background: black; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-Comprar no WhatsApp
-</button>
-
-</div>
-
-<!-- PRODUTO 3 -->
-<div style="
-width: 220px;
-background: white;
-padding: 15px;
-border-radius: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
-">
-
-<img src="https://i.pinimg.com/1200x/87/9b/49/879b49e6c06f543c3eed1f8032a53d10.jpg"
-style="width: 100%; max-width: 180px; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
-
-<h2 style="min-height: 60px; font-size: 16px;">
-Conjunto Brinco Argola Estilo neymar + Brinco Ponto de Luz com 50% de Desconto
-</h2>
-
-<p style="display: flex; flex-direction: column; align-items: center;">
-<span style="text-decoration: line-through; color: gray; font-size: 30px;">
-R$ 49,99
-</span>
-<span style="color: green; font-weight: bold; font-size: 30px;">
-R$ 42,99
-</span>
-</p>
-
-<button 
-style="margin-top: auto; background: black; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-Comprar no WhatsApp
-</button>
-
-</div>
-
-</section>
+</body>
+</html>
