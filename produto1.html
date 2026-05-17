@@ -7,6 +7,21 @@
 
 <style>
 
+/* RESET (remove linha branca e bugs) */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  background: #1a1a1a;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
 /* PRODUTO DETALHE */
 .produto-detalhe {
   display: flex;
@@ -31,8 +46,9 @@
 /* BOTÕES */
 .produto-info button {
   display: block;
+  width: 100%;
   margin-top: 15px;
-  padding: 12px 30px;
+  padding: 12px;
   background: black;
   color: white;
   border: none;
@@ -45,6 +61,7 @@
   .produto-detalhe {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
 
   .produto-detalhe img {
@@ -63,10 +80,8 @@
 <body>
 
 <header>
-  <div style="background:#1a1a1a; color:white; padding:25px; text-align:center;">
-    <h1>MT Joias</h1>
-    <h2>Brinco Argola Estilo Neymar</h2>
-  </div>
+  <h1>MT Joias</h1>
+  <h2>Brinco Argola Estilo Neymar</h2>
 </header>
 
 <!-- PRODUTO -->
