@@ -85,29 +85,33 @@ header {
 </header>
 
 <!-- PRODUTO -->
-<div class="produto-info">
+<div style="max-width: 400px;">
+    <h2>Brinco Argola Estilo Neymar</h2>
 
-  <h2>Brinco Argola Estilo Neymar</h2>
+    <p style="color: gray;">
+       Brinco Argola Estilo Neymar, Leve, confortavel e ideal para o uso do dia a dia.
+</p>
 
-  <p style="color: gray;">
-    Brinco cravejado de zirconia estilo Neymar, leve e ideal para o dia a dia.
-  </p>
 
-  <p style="font-size: 20px;">
-    <span style="text-decoration: line-through; color: gray;">R$ 39,99</span>
-    <span style="color: green; font-weight: bold; margin-left: 10px;">R$ 28,99</span>
-  </p>
+    <p style="font-size: 20px;">
+      <span style="text-decoration: line-through; color: gray;">R$ 38,99</span>
+      <span style="color: green; font-weight: bold; margin-left: 10px;">R$ 28,99</span>
+    </p>
 
-  <!-- BOTÃO 1 -->
-  <button onclick="window.location.href='https://wa.me/5561992564664?text=Quero%20comprar%20o%20Brinco'">
-    Comprar pelo WhatsApp
-  </button>
+    <button 
+    style="margin-top: 20px; background: black; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;"
+    onclick="window.location.href='https://wa.me/5561992564664?text=Opa%20irm%C3%A3o,%20dboa?%20Tava%20querendo%20comprar%20um%20brinco'">
+      Comprar no WhatsApp
+    </button>
 
-  <!-- BOTÃO 2 (AGORA NO LUGAR CERTO) -->
-  <button onclick="abrirFrete()">
-    🛒 Comprar agora
-  </button>
+<div style="background-color: white; height: 2px; margin-bottom: 30px;"></div>
 
+<!-- BOTÃO COMPRAR -->
+<button onclick="abrirFrete()" 
+style="padding: 15px 30px; background-color: black; color: white; border: none; border-radius: 20px; cursor: pointer;">
+🛒 Comprar agora
+</button>
+  
 <!-- POPUP FRETE -->
 <div id="frete" style="
 display: none;
