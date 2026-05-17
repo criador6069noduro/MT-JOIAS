@@ -7,11 +7,12 @@
 
 <style>
 
-/* RESET (remove linha branca e bugs) */
-html, body {
+/* RESET */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: Arial;
 }
 
 /* HEADER */
@@ -22,33 +23,48 @@ header {
   text-align: center;
 }
 
-/* PRODUTO DETALHE */
+/* PRODUTO */
 .produto-detalhe {
   display: flex;
-  gap: 40px;
+  gap: 50px;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 50px;
 }
 
 /* IMAGEM */
 .produto-detalhe img {
-  width: 300px;
-  max-width: 100%;
+  width: 320px;
   border-radius: 10px;
 }
 
-/* TEXTO */
+/* INFO */
 .produto-info {
   max-width: 400px;
 }
 
+/* PREÇO */
+.preco {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.preco-antigo {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.preco-novo {
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
 /* BOTÕES */
-.produto-info button {
-  display: block;
+.botao {
   width: 100%;
-  margin-top: 15px;
   padding: 12px;
+  margin-top: 12px;
   background: black;
   color: white;
   border: none;
@@ -74,7 +90,6 @@ header {
 }
 
 </style>
-
 </head>
 
 <body>
@@ -85,33 +100,39 @@ header {
 </header>
 
 <!-- PRODUTO -->
-<div style="max-width: 400px;">
+<div class="produto-detalhe">
+
+  <!-- IMAGEM -->
+  <img src="https://i.pinimg.com/1200x/2a/c8/73/2ac873b1a49e1a1ae66640cd08e60765.jpg">
+
+  <!-- TEXTO -->
+  <div class="produto-info">
+
     <h2>Brinco Argola Estilo Neymar</h2>
 
-    <p style="color: gray;">
-       Brinco Argola Estilo Neymar, Leve, confortavel e ideal para o uso do dia a dia.
-</p>
-
-
-    <p style="font-size: 20px;">
-      <span style="text-decoration: line-through; color: gray;">R$ 38,99</span>
-      <span style="color: green; font-weight: bold; margin-left: 10px;">R$ 28,99</span>
+    <p style="color: gray; margin-top: 10px;">
+      Brinco Argola Estilo Neymar, leve, confortável e ideal para o uso do dia a dia.
     </p>
 
-    <button 
-    style="margin-top: 20px; background: black; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;"
-    onclick="window.location.href='https://wa.me/5561992564664?text=Opa%20irm%C3%A3o,%20dboa?%20Tava%20querendo%20comprar%20um%20brinco'">
+    <p class="preco">
+      <span class="preco-antigo">R$ 38,99</span>
+      <span class="preco-novo">R$ 28,99</span>
+    </p>
+
+    <!-- BOTÕES -->
+    <button class="botao"
+    onclick="window.location.href='https://wa.me/5561992564664?text=Quero%20comprar%20o%20Brinco'">
       Comprar no WhatsApp
     </button>
 
-<div style="background-color: white; height: 2px; margin-bottom: 30px;"></div>
+    <button class="botao" onclick="abrirFrete()">
+      🛒 Comprar agora
+    </button>
 
-<!-- BOTÃO COMPRAR -->
-<button onclick="abrirFrete()" 
-style="padding: 15px 30px; background-color: black; color: white; border: none; border-radius: 20px; cursor: pointer;">
-🛒 Comprar agora
-</button>
-  
+  </div>
+
+</div>
+
 <!-- POPUP FRETE -->
 <div id="frete" style="
 display: none;
@@ -132,6 +153,7 @@ z-index: 9999;
   border-radius: 15px; 
   text-align: center;
   max-width: 300px;
+  width: 90%;
   ">
 
     <h3>🚚 Como deseja receber?</h3>
@@ -142,48 +164,28 @@ z-index: 9999;
 
     <br>
 
-    <!-- MOTOBOY -->
-<button onclick="window.location.href='https://pag.ae/81LdFHYKt'" 
-style="width: 100%; padding: 12px; margin-bottom: 10px; background: #111; color: white; border: none; border-radius: 10px; cursor: pointer;">
+    <button onclick="window.location.href='https://pag.ae/81LdFHYKt'" class="botao">
 🛵 Motoboy Premium R$25,00
 </button>
 
-<!-- CORREIOS -->
-<button onclick="window.location.href='https://pag.ae/81LbKAb4t'" 
-style="width: 100%; padding: 12px; margin-bottom: 10px; background: #111; color: white; border: none; border-radius: 10px; cursor: pointer;">
+<button onclick="window.location.href='https://pag.ae/81LbKAb4t'" class="botao">
 📦 Via Correios
 </button>
 
-<!-- RETIRADA -->
-<button onclick="window.location.href='https://pag.ae/81Lcjj4us'" 
-style="width: 100%; padding: 12px; margin-bottom: 10px; background: #111; color: white; border: none; border-radius: 10px; cursor: pointer;">
+<button onclick="window.location.href='https://pag.ae/81Lcjj4us'" class="botao">
 📍 Retirada no local (Grátis)
 </button>
 
-    <!-- FECHAR -->
-    <button onclick="fecharFrete()" 
-    style="margin-top: 10px; background: red; color: white; padding: 8px; border: none; border-radius: 8px;">
-      Fechar
-    </button>
+<button onclick="fecharFrete()" 
+style="margin-top: 10px; background: red; color: white; padding: 10px; border: none; border-radius: 8px;">
+Fechar
+</button>
 
   </div>
 
 </div>
 
-
-<!-- SCRIPT -->
-<script>
-function abrirFrete() {
-  document.getElementById("frete").style.display = "flex";
-}
-
-function fecharFrete() {
-  document.getElementById("frete").style.display = "none";
-}
-</script>
-
-</section>
-<!-- BOTÃO MENU -->
+<!-- MENU BOTÃO -->
 <button onclick="toggleMenu()" style="
 position: fixed;
 top: 10px;
@@ -195,140 +197,39 @@ border: none;
 padding: 10px 15px;
 border-radius: 8px;
 cursor: pointer;
-font-size: 16px;
 ">
 ☰
 </button>
 
-
 <!-- MENU LATERAL -->
 <aside id="menuLateral" style="
 width: 250px;
-background-color: #1a1a1a;
+background: #1a1a1a;
 color: white;
 height: 100vh;
 padding: 20px;
-box-sizing: border-box;
-font-family: sans-serif;
 position: fixed;
 top: 0;
 left: -260px;
-z-index: 999;
-overflow-y: auto;
 transition: 0.3s;
 ">
 
-  <!-- TÍTULO -->
-  <h2 style="
-  font-size: 1.2rem;
-  border-bottom: 1px solid #444;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  ">
-    Categorias
-  </h2>
+<h2>Categorias</h2>
 
-  <ul style="list-style: none; padding: 0; margin: 0;">
-
-    <!-- INÍCIO -->
-    <li style="margin-bottom: 15px;">
-      <a href="/MT-JOIAS/index.html"
-      style="color: white; font-weight: bold; text-decoration: none;">
-        🏠 Início
-      </a>
-    </li>
-
-    <!-- PRODUTOS -->
-    <li style="margin-bottom: 15px;">
-      
-      <details id="menuProdutos">
-        <summary style="color: white; font-weight: bold; cursor: pointer;">
-          ▼ PRODUTOS
-        </summary>
-        
-        <ul style="list-style: none; padding-left: 15px; margin-top: 10px;">
-          
-          <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto2.html" style="color: #ccc; text-decoration: none;">
-              Brinco Ponto De Luz
-            </a>
-          </li>
-
-          <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto1.html" style="color: #ccc; text-decoration: none;">
-              Brinco Argola Estilo Neymar
-            </a>
-          </li>
-
-          <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto4.html" style="color: #ccc; text-decoration: none;">
-              Brinco/piercing Raio
-            </a>
-          </li>
-
-          <li style="margin-bottom: 10px;">
-            <a href="/MT-JOIAS/produto3.html" style="color: #ccc; text-decoration: none;">
-              Brinco Argola Prata 925
-            </a>
-          </li>
-
-        </ul>
-      </details>
-
-    </li>
-
-  </ul>
-
-  <!-- SUPORTE -->
-  <div style="margin-top: 30px; border-top: 1px solid #444; padding-top: 20px;">
-    
-    <a href="https://wa.me/5561992564664"
-       target="_blank"
-       style="color: #00ff88; text-decoration: none; font-weight: bold;">
-       ➔ Suporte WhatsApp
-    </a>
-
-  </div>
+<a href="/MT-JOIAS/index.html" style="color:white;">🏠 Início</a>
 
 </aside>
 
-
-<!-- SCRIPT -->
+<!-- SCRIPTS -->
 <script>
-function toggleMenu() {
-  const menu = document.getElementById("menuLateral");
-
-  if (menu.style.left === "0px") {
-    menu.style.left = "-260px";
-  } else {
-    menu.style.left = "0px";
-  }
-}
-</script>
-
-
-<!-- SCRIPT MENU (PC aberto / celular fechado) -->
-<script>
-function ajustarMenu() {
-  const menu = document.getElementById("menuProdutos");
-  const lateral = document.getElementById("menuLateral");
-
-  if (window.innerWidth > 768) {
-    menu.open = true;       // abre produtos no PC
-    lateral.style.left = "0px"; // mostra menu no PC
-  } else {
-    menu.open = false;      // fecha no celular
-    lateral.style.left = "-260px"; // esconde menu no celular
-  }
+function abrirFrete() {
+  document.getElementById("frete").style.display = "flex";
 }
 
-ajustarMenu();
-window.addEventListener("resize", ajustarMenu);
-</script>
+function fecharFrete() {
+  document.getElementById("frete").style.display = "none";
+}
 
-
-<!-- SCRIPT -->
-<script>
 function toggleMenu() {
   let menu = document.getElementById("menuLateral");
 
@@ -340,4 +241,5 @@ function toggleMenu() {
 }
 </script>
 
-    </aside>
+</body>
+</html>
