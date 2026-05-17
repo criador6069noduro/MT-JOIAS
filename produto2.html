@@ -156,7 +156,7 @@ aside{
 position: fixed;
 top: 10px;
 left: 10px;
-z-index: 1000;
+z-index: 99999;
 background: #1a1a1a;
 color: white;
 border: none;
@@ -179,7 +179,7 @@ top: 0;
 left: -260px;
 transition: 0.3s;
 overflow-y: auto;
-z-index: 999;
+z-index: 9999;
 ">
 
   <h2 style="border-bottom:1px solid #444; padding-bottom:10px;">
@@ -199,15 +199,15 @@ z-index: 999;
     <!-- PRODUTOS -->
     <li style="margin-bottom:15px;">
 
-      <details id="menuProdutos">
+      <details>
 
         <summary style="
           cursor:pointer;
           font-weight:bold;
           color:white;
           padding:8px 0;
-          transition:0.3s;
           user-select:none;
+          transition:0.3s;
         "
         onmouseover="this.style.color='#00ff88'"
         onmouseout="this.style.color='white'">
@@ -269,6 +269,18 @@ z-index: 999;
   </div>
 
 </aside>
+
+<script>
+function toggleMenu(){
+  let menu = document.getElementById("menuLateral");
+
+  if(menu.style.left === "0px"){
+    menu.style.left = "-260px";
+  } else {
+    menu.style.left = "0px";
+  }
+}
+</script>
 
 <!-- PRODUTO -->
 <div class="container">
